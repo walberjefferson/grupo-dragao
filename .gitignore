@@ -1,3 +1,4 @@
 node_modules
 *.psd
 mix-manifest.json
+.idea
