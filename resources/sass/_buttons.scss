@@ -2,11 +2,15 @@
 .btn-max {
   font-size: 0.7rem;
   font-weight: 500;
+  padding-left: .50rem;
+  padding-right: .50rem;
   @include button-variant($link-recenter, $link-recenter, $white);
 }
 
 .btn-outline-max {
   font-size: 0.7rem;
   font-weight: 500;
+  padding-left: .50rem;
+  padding-right: .50rem;
   @include button-outline-variant($link-recenter, $white, $link-recenter, $link-recenter, $white);
 }
