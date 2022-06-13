@@ -15,7 +15,7 @@ mix.js('resources/js/app.js', 'assets/js').sass('resources/sass/app.scss', 'asse
 // });
 
 mix.browserSync({
-    proxy: 'grupo-dragao.test',
+    proxy: 'localhost:8080',
     files: [
         '*.html',
         '**/*.(js|css)'
