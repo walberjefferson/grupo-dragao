@@ -86,33 +86,38 @@ header.header {
     z-index: 1;
     border-radius: 12px 12px 0 0;
 
+    &:hover {
+      .card-img-top {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: .8;
+      }
+    }
+
     figure {
+      cursor: pointer;
       width: 100%;
       position: relative;
       padding-top: 70%;
       margin: 0;
 
-      .listing-picture-thumbnail {
+      .card-img-top {
         position: absolute;
         top: 0;
-        width: 120%;
+        width: 100%;
         height: 100%;
         opacity: 1;
         object-fit: cover;
         transition: -webkit-transform .35s;
         transition: transform .35s;
         transition: transform .35s, -webkit-transform .35s;
-        -webkit-transform: scale(1.15);
-        transform: scale(1.15);
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
         z-index: 0;
-        &:hover {
-          -webkit-transform: scale(1);
-          transform: scale(1);
-        }
       }
     }
 
-    .figCaption {
+    .caption {
       display: flex;
       justify-content: flex-end;
       flex-flow: column;
@@ -123,34 +128,22 @@ header.header {
       padding: 10px;
       width: 100%;
       height: 100%;
-      color: #fff;
-      background-image: linear-gradient(180deg, transparent 60%, rgba(25, 28, 31, .6));
-      filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000', GradientType=0)";
 
-      .listing-price {
+      .preco {
+        font-weight: 600;
+        color: $white;
         font-size: .9375rem;
-        font-weight: 700;
-        text-align: left;
         margin-bottom: 0;
-        color: #fff;
+        text-align: left;
 
         .listing-price-details {
           font-size: .8125rem;
-          font-weight: 700;
-          color: #fff;
+          font-weight: 600;
           margin-left: 0.5rem;
         }
       }
     }
 
-    .preco {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      font-weight: 600;
-      color: $white;
-      font-size: 1.2rem;
-    }
 
     .favorito {
       position: absolute;
@@ -164,6 +157,10 @@ header.header {
       text-align: center;
       color: $white;
       font-size: 1.1rem;
+      z-index: 10;
+      i {
+        color: $bottom_card;
+      }
     }
   }
 
@@ -767,9 +764,11 @@ footer {
         .listing-details {
           table {
             width: 100%;
+
             tr {
               height: 2.5rem;
             }
+
             td {
               font-size: .8rem;
               font-weight: 400;
@@ -792,6 +791,7 @@ footer {
 
           .energy-details {
             width: 95%;
+
             .row {
               align-items: center;
               margin-top: 1rem;
