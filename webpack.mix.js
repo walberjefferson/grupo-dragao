@@ -14,8 +14,11 @@ mix.js('resources/js/app.js', 'assets/js').sass('resources/sass/app.scss', 'asse
 //     ]
 // });
 
+mix.copy('node_modules/font-awesome-sass/assets/fonts/font-awesome/*', 'assets/fonts/font-awesome');
+mix.copy('node_modules/font-awesome/css/font-awesome.min.css', 'assets/css');
+
 mix.browserSync({
-    proxy: 'grupo-dragao.test',
+    proxy: 'localhost:8080',
     files: [
         '*.html',
         '**/*.(js|css)'
