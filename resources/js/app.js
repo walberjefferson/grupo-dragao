@@ -1,7 +1,7 @@
+import 'bootstrap/dist/js/bootstrap.js';
+// import * as bootstrap from 'bootstrap';
+// import {ScrollSpy} from 'bootstrap';
 require('./bootstrap');
-//require('./scripts');
-
-$(".favorito:hover").find('.fa').toggleClass('')
 
 $(document).ready(function () {
     $(".favorito .fa").hover(function () {
@@ -9,7 +9,13 @@ $(document).ready(function () {
     }, function () {
         $(this).removeClass("fa-heart").addClass("fa-heart-o");
     });
+
+    // const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]')
+    // dataSpyList.forEach(dataSpyEl => {
+    //     ScrollSpy.getInstance(dataSpyEl).refresh()
+    // })
 });
+
 
 // var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 //     target: '#listing-info-tabs-slider'

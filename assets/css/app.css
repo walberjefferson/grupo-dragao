@@ -12983,7 +12983,7 @@ footer a.disabled {
   width: 100%;
   overflow-x: scroll;
   -ms-scroll-snap-type: x mandatory;
-  scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-color: transparent transparent;
@@ -12991,25 +12991,27 @@ footer a.disabled {
   scrollbar-width: none;
 }
 
-.listing-details-desktop-component .info-tabs-slider .listing-info-tabs a {
+.listing-details-desktop-component .info-tabs-slider .listing-info-tabs .nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   font-size: 0.9375rem;
-  color: #000;
+  color: #242121;
   margin: 0 1.6rem;
   padding: 0.8rem 0;
   text-decoration: none;
+  border-bottom: 2px solid #fff;
 }
 
-.listing-details-desktop-component .info-tabs-slider .listing-info-tabs a:first-child {
+.listing-details-desktop-component .info-tabs-slider .listing-info-tabs .nav-link.active,
+.listing-details-desktop-component .info-tabs-slider .listing-info-tabs .nav-link:hover {
+  color: #857751;
+  border-bottom: 2px solid #857751;
+}
+
+.listing-details-desktop-component .info-tabs-slider .listing-info-tabs .nav-link:first-child {
   margin-left: 0;
-}
-
-.listing-details-desktop-component .info-tabs-slider .listing-info-tabs a.active {
-  color: #003aa8;
-  border-bottom: 1px solid #003aa8;
 }
 
 .listing-details-desktop-component .info-tabs-slider .info-tabs-nav-btn {
@@ -13386,5 +13388,15 @@ footer a.disabled {
 .share-btn-component.dropdown {
   position: relative;
   display: inline-block;
+}
+
+.nav-link.active {
+  color: red;
+}
+
+.scrollspy-example {
+  position: relative;
+  overflow-y: scroll;
+  height: 200px;
 }
 
