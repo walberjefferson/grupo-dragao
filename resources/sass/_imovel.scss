@@ -1,0 +1,356 @@
+#imovel {
+  .titulo {
+    color: $link-recenter;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .endereco {
+    color: $link-recenter;
+    font-size: 0.9375rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .share, .heart {
+    .btn {
+      padding: 0;
+      font-size: 1.3rem;
+      outline: none;
+      &:hover, &:active, &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &.btn-link {
+        color: $header_color;
+      }
+    }
+
+    a {
+      color: $header_color;
+    }
+
+    .dropdown-toggle {
+      &::after {
+        display: none;
+      }
+    }
+    font-size: 1.3rem;
+
+    i {
+      &:last-child {
+        @extend .ms-2;
+      }
+    }
+    .fa-heart-o, .fa-heart {
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+
+  .principal {
+    @extend .mb-2;
+  }
+
+  .thumbnails {
+    img {
+      @extend .img-fluid;
+    }
+  }
+
+
+  .informacoes {
+    .preco {
+      @extend .d-flex, .align-items-center;
+      color: $link-recenter;
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    .identificacao {
+      @extend .ms-3;
+      color: $bottom_card;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .list-info {
+      @extend .d-flex, .justify-content-start, .align-items-center;
+      color: $bottom_card;
+      font-size: .8rem;
+      font-weight: 500;
+      list-style: none;
+      padding-left: 0 !important;
+      gap: 1.3rem;
+
+      li {
+        @extend .d-flex, .align-items-center, .justify-content-center;
+        //margin-right: 1.3rem;
+        i {
+          font-size: .9375rem;
+          margin-right: .4rem;
+        }
+      }
+
+      .venda {
+        font-size: .8125rem;
+        color: $link-recenter;
+        border-radius: 5px;
+        border: 1px solid $link-recenter;
+        padding: .4rem 0.8rem;
+      }
+    }
+
+    .detalhes {
+      color: $header_color;
+
+      section {
+        @extend .mb-4, .pb-2;
+        border-bottom: 2px solid $gray-300;
+        &:last-child {
+          border-bottom: none;
+          @extend .mb-0, .pb-0;
+        }
+
+        table {
+          width: 100%;
+
+          tr {
+            height: 2.5rem;
+          }
+
+          td {
+            font-size: .865rem;
+            font-weight: 400;
+            color: #000;
+
+            i {
+              font-size: 1.0625rem;
+              color: $link-recenter;
+              margin: 0 0.65rem 0.2rem 0;
+            }
+
+            &.first-column {
+              min-width: 8rem;
+              width: 58%;
+              padding-right: 0.5rem;
+            }
+
+            .info-detail {
+              display: flex;
+              align-items: center;
+            }
+
+            &:not(.first-column) {
+              font-weight: 600;
+              color: $gray-700;
+              padding-right: 1rem;
+              white-space: nowrap;
+
+            }
+          }
+        }
+      }
+
+      p {
+        font-size: .865rem;
+      }
+
+      .titulo {
+        color: $header_color;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .energy-details {
+        width: 95%;
+
+        .row {
+          align-items: center;
+          margin-top: 1rem;
+
+          .info-label {
+            max-width: 50%;
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .info-detail {
+              display: flex;
+              align-items: center;
+
+              i {
+                color: $link-recenter;
+                margin: 0 0.65rem 0.2rem 0;
+              }
+            }
+          }
+
+          .info-picture {
+            min-width: 30%;
+            max-width: 50%;
+
+            img {
+              margin: 0;
+              display: flex;
+              justify-content: center;
+              max-width: 100%;
+              max-height: 4rem;
+            }
+          }
+        }
+      }
+
+      .location-map {
+        width: 100%;
+        position: relative;
+        padding-top: 41%;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .osm-label {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: hsla(0, 0%, 100%, .7);
+          font-size: 11px;
+        }
+      }
+
+      .listing-rooms-list {
+        .listing-room-info-container {
+          display: flex;
+          flex-flow: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 1rem 2rem;
+          border-radius: 6px;
+          border: 1px solid rgb(0 0 0 / 6%);
+          box-shadow: 2px 2px 2px 0 rgb(0 0 0 / 6%);
+          background-color: #fff;
+          margin-bottom: 1rem;
+
+          .listing-room-info-header {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.7rem;
+            color: $bottom_card;
+
+            .listing-room-type {
+              margin-right: auto;
+              font-size: .9375rem;
+              font-weight: 600;
+            }
+
+            .listing-room-info-title {
+              font-size: .6875rem;
+              margin-left: 0.6rem;
+            }
+
+            .listing-room-info-value {
+              font-size: .8125rem;
+              margin-left: 0.6rem;
+            }
+          }
+
+          .listing-room-info-description {
+            font-size: .8125rem;
+            line-height: 27px;
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+
+      .credit-simulation-component {
+        svg:not(:root) {
+          &.svg-inline--fa {
+            overflow: visible;
+          }
+        }
+
+        .svg-inline--fa {
+          display: inline-block;
+          font-size: inherit;
+          height: 1em;
+          overflow: visible;
+          vertical-align: -0.125em;
+
+          &.fa-w-16 {
+            width: 1em;
+          }
+        }
+
+        .component-content {
+          font-size: .9375rem;
+          font-weight: 400;
+
+          .component-content input[type=range] {
+            height: 32px;
+            -webkit-appearance: none;
+            margin: 10px 0;
+            width: 100%;
+          }
+
+          .information-icon {
+            font-size: 1.625rem;
+            margin-left: 0.5rem;
+            color: $link-recenter;
+          }
+        }
+
+        .form-group {
+          @extend .mb-2;
+        }
+      }
+
+      .disclaimer {
+        font-size: .8125rem;
+      }
+
+      .form-text {
+        display: block;
+      }
+
+      .nearby-regions {
+        margin-bottom: 3rem;
+
+        .regions-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          list-style: none;
+          padding: 0;
+
+          li {
+            font-size: .9375rem;
+            margin-bottom: 0.3rem;
+            text-align: left;
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

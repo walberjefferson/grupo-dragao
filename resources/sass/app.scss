@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 // Variables
 @import 'variables';
+@import 'icons';
 // Fonts
 //@import 'fonts';
 // Animate
@@ -12,7 +13,8 @@
 //Responsive
 @import "responsive";
 @import "buttons";
-@import "remax";
+//@import "remax";
+@import "imovel";
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -76,6 +78,13 @@ header.header {
 
     .list-inline {
       margin-bottom: 0;
+      .list-inline-item {
+        @extend .d-flex, .align-items-center, .justify-content-between;
+        i {
+          margin-right: .4rem;
+          font-size: 1rem;
+        }
+      }
     }
   }
 

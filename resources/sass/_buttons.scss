@@ -14,3 +14,7 @@
   padding-right: .50rem;
   @include button-outline-variant($link-recenter, $white, $link-recenter, $link-recenter, $white);
 }
+
+.btn-outline-red {
+  @include button-outline-variant($red, $white, $red, $red, $white);
+}
