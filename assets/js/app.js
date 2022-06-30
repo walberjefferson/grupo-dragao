@@ -19262,7 +19262,11 @@ $(document).ready(function () {
     $(this).removeClass("fa-heart-o").addClass("fa-heart");
   }, function () {
     $(this).removeClass("fa-heart").addClass("fa-heart-o");
-  });
+  }); // $(".favorito a").click(function (e) {
+  //     e.preventDefault();
+  //
+  //     alert("Clicou");
+  // });
 });
 
 /***/ }),

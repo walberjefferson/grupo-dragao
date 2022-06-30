@@ -8,4 +8,10 @@ $(document).ready(function () {
     }, function () {
         $(this).removeClass("fa-heart").addClass("fa-heart-o");
     });
+
+    // $(".favorito a").click(function (e) {
+    //     e.preventDefault();
+    //
+    //     alert("Clicou");
+    // });
 });
